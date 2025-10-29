@@ -43,13 +43,13 @@ npm run dev
 ## Screenshots
 
 ### Products Page
-![Products Page](./assets/products.png)
+![Products Page](./client/assets/products.png)
 
 ### Cart Page
-![Cart Page](./assets/cart.png)
+![Cart Page](./client/assets/cart.png)
 
 ### Checkout Page
-![Checkout Page](./assets/chekoutDetails.png)
+![Checkout Page](./client/assets/chekoutDetails.png)
 
 
 ##  Demo Video
