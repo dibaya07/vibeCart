@@ -19,7 +19,7 @@ export default function Cart() {
 
   const cartProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/cart");
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/cart`);
       const data = response.data;
       if (Array.isArray(data)) {
         setCartItems(data);
@@ -39,7 +39,7 @@ export default function Cart() {
   const handleDelete = async (productId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/cart/${productId}`
+        `${import.meta.env.VITE_API_URL}/cart/${productId}`
       );
       if (response.data.success) {
         setCartItems((prev) => prev.filter((item) => item.id !== productId));
@@ -53,7 +53,7 @@ export default function Cart() {
 
   const updateQty = async (id, quantity) => {
     try {
-      const response = await axios.put(`http://localhost:3000/api/cart/${id}`, {
+      const response = await axios.put(`${import.meta.env.VITE_API_URL}/cart/${id}`, {
         quantity,
       });
       if (response.data.success) {

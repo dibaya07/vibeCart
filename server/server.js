@@ -8,7 +8,7 @@ const connectDB = require("./config/connectDB")
 connectDB()
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: process.env.CLIENTSIDE_URL,
 
 }))
 app.use(express.json())

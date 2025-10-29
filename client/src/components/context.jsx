@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
 
   const allProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/products");
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/products`);
       setProducts(response.data || []);
     } catch (error) {
       console.log("front error ", error);
@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
 
   const cartIds = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/cart/ids");
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/cart/ids`);
       if (response.data.success) {
         setCartItemIds(response.data.productIds || []);
       }
