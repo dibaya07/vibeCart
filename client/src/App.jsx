@@ -2,7 +2,7 @@ import "./App.css";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import SubmitPage from "./components/submitPage";
+import SubmitPage from "./components/SubmitPage";
 
 function App() {
   const router = createBrowserRouter([
