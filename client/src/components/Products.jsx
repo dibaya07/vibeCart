@@ -10,7 +10,7 @@ export default function Products() {
 
   const handleClick = async (productId) => {
     try{
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}/cart`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/cart`, {
       id: productId,
     });
     if (response.data.success) {

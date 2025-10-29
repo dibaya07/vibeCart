@@ -27,7 +27,7 @@ export default function Checkout() {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const response = await axios.delete(`${import.meta.env.VITE_API_URL}/cart/`);
+      const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/cart/`);
       if (response.data.success) {
         alert("order placed");
 
